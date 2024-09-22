@@ -1,0 +1,17 @@
+.header{
+    background-color: rgba(137, 14, 14, 0.341);
+    height: 10vh;
+    left:250px;
+    width: 90%;
+    position:fixed;
+    top:0;
+    padding-top: 10px;
+} 
+.header p{
+    color: rgb(32, 96, 62);
+    display: flex;
+    justify-content: center;
+}
+.header p:hover{
+    color:rgba(177, 121, 37, 0.458);
+}

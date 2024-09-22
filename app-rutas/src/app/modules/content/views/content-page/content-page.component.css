@@ -1,0 +1,27 @@
+/* .content{
+    background-color: rgba(234, 232, 232, 0.186);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+} */
+
+/* .content img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 100px;
+} */
+
+.barra{
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(212, 159, 14, 0.535);
+    position: fixed;
+    left: 250px;
+    top:65px
+}   
