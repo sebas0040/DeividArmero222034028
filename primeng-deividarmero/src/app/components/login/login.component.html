@@ -1,4 +1,4 @@
-<p>login works!</p>
+
 <form [formGroup]="loginForm">
     
     <div class="card flex justify-content-center">
@@ -12,6 +12,20 @@
                 placeholder="Nombre de Usuario">
 
             </div>
+
+            <div class="field">
+                <input 
+                type="password" 
+                pInputPassword
+                formControlName="password"
+                class="w-full"
+                name="password"
+                placeholder="Contraseña"/>                                  
+                               
+
+            </div>
+            <p-button type="submit" label="Iniciar sesion" styleClass="w-full"></p-button>
+            <div class="mt-2">No estas registrado? <a routerLink="/register">Registrarme</a></div>
         </p-card>
     </div>
     
