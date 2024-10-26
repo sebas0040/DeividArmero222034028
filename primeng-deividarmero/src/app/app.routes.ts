@@ -3,6 +3,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginTestComponent } from './components/login-test/login-test.component';
+import { OtherFormComponent } from './components/other-form/other-form.component';
+import { OtherFormCbComponent } from './components/other-form-cb/other-form-cb.component';
 
 
 
@@ -27,6 +29,13 @@ export const routes: Routes = [
     {
         path: 'login-test',
         component: LoginTestComponent
+    },
+    {
+        path: 'other-form',
+        component:OtherFormComponent
+    },
+    {
+        path: 'other-form-cb',
+        component: OtherFormCbComponent
     }
-    
 ];

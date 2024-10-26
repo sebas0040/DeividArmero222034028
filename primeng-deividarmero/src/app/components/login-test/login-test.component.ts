@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder,FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { Dropdown, DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { Password, PasswordModule } from 'primeng/password';
 
 @Component({
   selector: 'app-login-test',
   standalone: true,
-  imports: [ReactiveFormsModule,InputTextModule,ButtonModule,PasswordModule,CommonModule],
+  imports: [ReactiveFormsModule,InputTextModule,ButtonModule,PasswordModule,CommonModule, DropdownModule],
   templateUrl: './login-test.component.html',
   styleUrl: './login-test.component.css'
 })
