@@ -37,5 +37,10 @@ export const routes: Routes = [
     {
         path: 'other-form-cb',
         component: OtherFormCbComponent
-    }
+    },
+    // {
+    //     path: 'logintest',
+    //     component: LoginTestComponent
+    // }
+
 ];
