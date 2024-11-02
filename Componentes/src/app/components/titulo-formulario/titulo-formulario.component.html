@@ -1,1 +1,42 @@
-<p>titulo-formulario works!</p>
+<div class="p-fluid">
+    <h2>Formulario solicitud de vacaciones</h2>
+    <form [formGroup]="userForm">
+      
+      
+      <div class="cabeza">
+        <div class="p-field">
+          <label for="name">Nombre</label>
+          <input id="name" type="text" pInputText formControlName="name" placeholder="Primer nombre" />
+          <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">
+            El nombre es requerido
+          </div>
+        </div>
+  
+        <div class="p-field">
+          <label for="name"> </label>
+          <input id="apellido" type="text" pInputText formControlName="apellido" placeholder="Apellido"/>
+          <div *ngIf="userForm.controls['apellido'].invalid && userForm.controls['apellido'].touched" class="error">
+            El apellido es requerido
+          </div>
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label for="email">Correo electrónico</label>
+        
+        <input id="email" type="email" pInputText formControlName="email" />
+        <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">
+          Correo no válido
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label for="tel">Telefono</label>
+        <input id="tel" type="tel" pInputText formControlName="tel" />
+        <div *ngIf="userForm.controls['tel'].invalid && userForm.controls['tel'].touched" class="error">
+          Telefono no válido
+        </div>
+      </div>
+  
+    </form>
+  </div>

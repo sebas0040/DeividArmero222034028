@@ -1,1 +1,22 @@
-<p>gerente works!</p>
+<div class="p-fluid">
+    <form [formGroup]="userForm">
+
+      <div class="p-field">
+        <label for="name">Nombre del gerente</label>
+        <input id="name" type="text" pInputText formControlName="name" />
+        <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">
+          El nombre es requerido
+        </div>
+      </div>
+  
+      <div class="p-field">
+        <label for="email">Correo electrónico del gerente</label>
+        <input id="email" type="email" pInputText formControlName="email" />
+        <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">
+          Correo no válido
+        </div>
+      </div>
+  
+    
+    </form>
+  </div>
