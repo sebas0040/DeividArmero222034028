@@ -21,7 +21,7 @@ export const routes: Routes = [
         component:GerenteComponent
     },
     {
-        path:'detail_licence',
+        path:'detail-licence',
         component:DetailLicenceComponent
     }
 

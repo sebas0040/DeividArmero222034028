@@ -32,7 +32,7 @@ export class DetailLicenceComponent {
   onSubmit(){
     if (this.otherForm.valid){
       console.log(this.otherForm.value)
-      this.router.navigate(['/logintest']) //habilita la navegación, debe activarse en el constructor
+      this.router.navigate(['/logintest']) 
     }else{
       console.log('Formulario no valido')
     }
