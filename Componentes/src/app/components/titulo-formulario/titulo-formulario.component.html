@@ -21,22 +21,27 @@
         </div>
       </div>
 
-      <div class="p-field">
+      
+
+      <div class="p-field" style="position: relative;">
         <label for="email">Correo electrónico</label>
-        
-        <input id="email" type="email" pInputText formControlName="email" />
+        <input id="email" type="email" pInputText formControlName="email" style="padding-left: 30px;" />
+        <i class="pi pi-envelope" style="position: absolute; left:10px; transform:translateY(40%); top: 25px; color: #888;"></i>
         <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">
           Correo no válido
-        </div>
+        </div>      
       </div>
 
-      <div class="p-field">
+      <div class="p-field" style="position: relative;">
         <label for="tel">Telefono</label>
-        <input id="tel" type="tel" pInputText formControlName="tel" />
+        <input id="tel" type="tel" pInputText formControlName="tel" style="padding-left: 30px;"/>
+        <i class="pi pi-phone" style="position: absolute; left:10px; transform:translateY(50%); top: 25px; color: #888;"></i>
         <div *ngIf="userForm.controls['tel'].invalid && userForm.controls['tel'].touched" class="error">
           Telefono no válido
         </div>
       </div>
+
+      
   
     </form>
   </div>

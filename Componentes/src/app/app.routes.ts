@@ -13,7 +13,7 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        path:'titulo_formulario',
+        path:'titulo-formulario',
         component:TituloFormularioComponent
     },
     {

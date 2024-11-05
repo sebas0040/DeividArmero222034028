@@ -4,6 +4,7 @@
       <div class="p-field">
         <label for="name">Nombre del gerente</label>
         <input id="name" type="text" pInputText formControlName="name" />
+        <i class="pi pi-envelope" style="position: absolute; left:10px; transform:translateY(40%); top: 25px; color: #888;"></i>
         <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">
           El nombre es requerido
         </div>
@@ -12,6 +13,7 @@
       <div class="p-field">
         <label for="email">Correo electrónico del gerente</label>
         <input id="email" type="email" pInputText formControlName="email" />
+        <i class="pi pi-envelope" style="position: absolute; left:10px; transform:translateY(40%); top: 25px; color: #888;"></i>
         <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">
           Correo no válido
         </div>

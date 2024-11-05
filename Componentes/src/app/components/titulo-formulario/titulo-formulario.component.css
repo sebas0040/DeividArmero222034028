@@ -5,4 +5,7 @@
 }
 .p-fluid * {
     margin-top: 30px;
+    translate: translatey(50%);
 }
+
+

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { FormBuilder,FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
+import { MenuItem, PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { Dropdown, DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
@@ -17,6 +18,7 @@ import { Password, PasswordModule } from 'primeng/password';
 export class TituloFormularioComponent {
   userForm: FormGroup;
 
+
   constructor(private fb : FormBuilder){
     this.userForm = this.fb.group({
       name: ['',Validators.required],
@@ -24,7 +26,7 @@ export class TituloFormularioComponent {
       email: ['',Validators.required,Validators.email],
       tel: ['',Validators.required,Validators.pattern("^(\\d{3} \\d{3} \\d{4})$")]
     })
-    
   }
+
 
 }
