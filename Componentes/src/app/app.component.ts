@@ -10,7 +10,7 @@ import { DetailLicenceComponent } from './components/detail-licence/detail-licen
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ButtonModule,ReactiveFormsModule,TituloFormularioComponent,GerenteComponent,DetailLicenceComponent],
+  imports: [RouterOutlet,ButtonModule,ReactiveFormsModule,TituloFormularioComponent,GerenteComponent,DetailLicenceComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

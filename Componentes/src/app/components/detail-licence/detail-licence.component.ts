@@ -9,12 +9,13 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextarea, InputTextareaModule } from 'primeng/inputtextarea';
 import { RadioButtonModule } from 'primeng/radiobutton';
-import { GerenteComponent } from '../gerente/gerente.component';
+import { DataServiceService } from '../../services/data-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-detail-licence',
   standalone: true,
-  imports: [ReactiveFormsModule,DropdownModule,CalendarModule,ButtonModule,CommonModule,CheckboxModule,RadioButtonModule,InputTextModule,InputTextareaModule,GerenteComponent],
+  imports: [ReactiveFormsModule,DropdownModule,CalendarModule,ButtonModule,CommonModule,CheckboxModule,RadioButtonModule,InputTextModule,InputTextareaModule,HttpClientModule],
   templateUrl: './detail-licence.component.html',
   styleUrl: './detail-licence.component.css'
 })
@@ -24,7 +25,7 @@ export class DetailLicenceComponent {
   otherForm: FormGroup;
   
 
-  constructor(private fb: FormBuilder, private router:Router,){
+  constructor(private fb: FormBuilder, private router:Router, private dataService:DataServiceService){
     this.otherForm = this.fb.group({
       fech_inicio:['',Validators.required],
       fech_fin:['',Validators.required],
@@ -34,12 +35,14 @@ export class DetailLicenceComponent {
   
   onSubmit(){
     if (this.otherForm.valid){
-      console.log(this.otherForm.value)
-      // console.log(this.gerente.userForm)
-      this.router.navigate(['/logintest']) 
+      const fech_inicio = this.otherForm.value.fech_inicio
+      const fech_fin = this.otherForm.value.fech_fin
+      const descripcion = this.otherForm.value.descripcion
+      this.dataService.register({fech_inicio,fech_fin,descripcion})
     }else{
       console.log('Formulario no valido')
     }
   }
 
 }
+

@@ -1,10 +1,10 @@
 <div class="p-fluid">
     <!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit()"> -->
-    <form [formGroup]="userForm">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <div class="p-field">
         <label for="name">Nombre del gerente</label>
-        <input id="name" type="text" pInputText formControlName="name" />
-        <i class="pi pi-envelope" style="position: absolute; left:10px; transform:translateY(40%); top: 25px; color: #888;"></i>
+        <input id="name" type="text" pInputText formControlName="name"  />
+        <i class="pi pi-address-book" style="position: absolute; left:10px; transform:translateY(40%); top: 25px; color: #888;"></i>
         <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">
           El nombre es requerido
         </div>
