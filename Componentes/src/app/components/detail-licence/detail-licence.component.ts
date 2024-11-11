@@ -9,11 +9,12 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextarea, InputTextareaModule } from 'primeng/inputtextarea';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { GerenteComponent } from '../gerente/gerente.component';
 
 @Component({
   selector: 'app-detail-licence',
   standalone: true,
-  imports: [ReactiveFormsModule,DropdownModule,CalendarModule,ButtonModule,CommonModule,CheckboxModule,RadioButtonModule,InputTextModule,InputTextareaModule],
+  imports: [ReactiveFormsModule,DropdownModule,CalendarModule,ButtonModule,CommonModule,CheckboxModule,RadioButtonModule,InputTextModule,InputTextareaModule,GerenteComponent],
   templateUrl: './detail-licence.component.html',
   styleUrl: './detail-licence.component.css'
 })
@@ -21,7 +22,9 @@ export class DetailLicenceComponent {
   
 
   otherForm: FormGroup;
-  constructor(private fb: FormBuilder, private router:Router){
+  
+
+  constructor(private fb: FormBuilder, private router:Router,){
     this.otherForm = this.fb.group({
       fech_inicio:['',Validators.required],
       fech_fin:['',Validators.required],
@@ -32,6 +35,7 @@ export class DetailLicenceComponent {
   onSubmit(){
     if (this.otherForm.valid){
       console.log(this.otherForm.value)
+      // console.log(this.gerente.userForm)
       this.router.navigate(['/logintest']) 
     }else{
       console.log('Formulario no valido')

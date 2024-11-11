@@ -20,7 +20,7 @@ export class GerenteComponent {
   constructor(private fb : FormBuilder, private router:Router){
     this.userForm = this.fb.group({
       name: ['',Validators.required],
-      email: ['',Validators.required,Validators.email,], 
+      email: ['',[Validators.required,Validators.email,]], 
     })
     
   }

@@ -25,8 +25,8 @@ export class TituloFormularioComponent {
     this.userForm = this.fb.group({
       name: ['',Validators.required],
       apellido: ['',Validators.required], 
-      email: ['',Validators.required,Validators.email],
-      tel: ['',Validators.required,Validators.pattern("^(\\d{3} \\d{3} \\d{4})$")]
+      email: ['',[Validators.required,Validators.email]],
+      tel: ['',[Validators.required,Validators.pattern("^(\\d{3} \\d{3} \\d{4})$")]]
     })
   }
 
