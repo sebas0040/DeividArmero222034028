@@ -1,10 +1,5 @@
 1. Crear una nueva rama que se llame IntegracionBackend.
 
-Respuestas mejoradas:
-1. Crear una nueva rama llamada IntegracionBackend.
-
-Respuesta: Se debe usar el comando git checkout -b IntegracionBackend para crear y cambiar a la nueva rama en el proyecto.
-
 2. Conectar el formulario con el backend y la base de datos para registrar toda la información, evidenciándola en la base de datos.
 
 Respuesta: En el archivo data-service.service.ts dentro del servicio, se implementó el método updateFormData, encargado de recibir y consolidar los datos del formulario desde los diferentes componentes en un objeto formData.
