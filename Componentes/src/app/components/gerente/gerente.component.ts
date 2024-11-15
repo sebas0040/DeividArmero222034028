@@ -33,11 +33,9 @@ export class GerenteComponent {
     
   }
 
-  
-
   onSubmit(){
     const emailGerente = this.userForm.value.email
     const nameGerente = this.userForm.value.name
-    this.dataService.register({nameGerente,emailGerente})
+    this.dataService.updateFormData({nameGerente,emailGerente})
   }
 }

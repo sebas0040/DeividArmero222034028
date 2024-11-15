@@ -2,6 +2,7 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { TituloFormularioComponent } from '../titulo-formulario/titulo-formulario.component';
 import { GerenteComponent } from '../gerente/gerente.component';
 import { DetailLicenceComponent } from '../detail-licence/detail-licence.component';
+import { DataServiceService } from '../../services/data-service.service';
 
 @Component({
   selector: 'app-home',
@@ -11,4 +12,6 @@ import { DetailLicenceComponent } from '../detail-licence/detail-licence.compone
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
+  constructor (private dataService:DataServiceService){}
 }
+

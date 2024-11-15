@@ -34,10 +34,10 @@
       </div>
 
       <div class="p-field" style="position: relative;">
-        <label for="tel">Telefono</label>
-        <input id="tel" type="tel" pInputText formControlName="tel" style="padding-left: 30px;"/>
+        <label for="telefono">Telefono</label>
+        <input id="telefono" type="telefono" pInputText formControlName="telefono" style="padding-left: 30px;" placeholder="Ej: 312 444 2222"/>
         <i class="pi pi-phone" style="position: absolute; left:10px; transform:translateY(50%); top: 25px; color: #888;"></i>
-        <div *ngIf="userForm.controls['tel'].invalid && userForm.controls['tel'].touched" class="error">
+        <div *ngIf="userForm.controls['telefono'].invalid && userForm.controls['telefono'].touched" class="error">
           Telefono no válido
         </div>
       </div>

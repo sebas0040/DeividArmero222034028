@@ -35,10 +35,10 @@ export class DetailLicenceComponent {
   
   onSubmit(){
     if (this.otherForm.valid){
-      const fech_inicio = this.otherForm.value.fech_inicio
-      const fech_fin = this.otherForm.value.fech_fin
+      const fech_inicio = new Date(this.otherForm.value.fech_inicio).toLocaleDateString('es-CO')
+      const fech_fin = new Date(this.otherForm.value.fech_fin).toLocaleDateString('es-CO')
       const descripcion = this.otherForm.value.descripcion
-      this.dataService.register({fech_inicio,fech_fin,descripcion})
+      this.dataService.updateFormData({fech_inicio,fech_fin,descripcion})
     }else{
       console.log('Formulario no valido')
     }
