@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DELL\\Downloads\\Conexion_BD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|d:\\dell\\downloads\\conexion_bd\\controllers\\registrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|solutionrelative:controllers\\registrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|d:\\dell\\downloads\\conexion_bd\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|solutionrelative:search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|d:\\dell\\downloads\\conexion_bd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|d:\\dell\\downloads\\conexion_bd\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BA6F3A-5314-4E84-A9B8-1EA51F61435E}|Conexion_BD.csproj|solutionrelative:registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Registro.cs",
+              "DocumentMoniker": "D:\\DELL\\Downloads\\Conexion_BD\\Registro.cs",
+              "RelativeDocumentMoniker": "Registro.cs",
+              "ToolTip": "D:\\DELL\\Downloads\\Conexion_BD\\Registro.cs",
+              "RelativeToolTip": "Registro.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T19:01:54.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DELL\\Downloads\\Conexion_BD\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\DELL\\Downloads\\Conexion_BD\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwBoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T17:59:50.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Search.cs",
+              "DocumentMoniker": "D:\\DELL\\Downloads\\Conexion_BD\\Search.cs",
+              "RelativeDocumentMoniker": "Search.cs",
+              "ToolTip": "D:\\DELL\\Downloads\\Conexion_BD\\Search.cs",
+              "RelativeToolTip": "Search.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T02:40:34.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "registroController.cs",
+              "DocumentMoniker": "D:\\DELL\\Downloads\\Conexion_BD\\Controllers\\registroController.cs",
+              "RelativeDocumentMoniker": "Controllers\\registroController.cs",
+              "ToolTip": "D:\\DELL\\Downloads\\Conexion_BD\\Controllers\\registroController.cs",
+              "RelativeToolTip": "Controllers\\registroController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvwwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T17:27:23.374Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

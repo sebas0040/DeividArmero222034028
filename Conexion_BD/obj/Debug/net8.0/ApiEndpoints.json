@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "Conexion_BD.Controllers.RegistroController",
+    "Method": "Register",
+    "RelativePath": "api/Registro/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "Conexion_BD.Registro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Conexion_BD.Controllers.RegistroController",
+    "Method": "Search",
+    "RelativePath": "api/Registro/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "Conexion_BD.Search",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
