@@ -1,41 +1,130 @@
-#Mi Proyecto
+1. Crear una nueva rama que se llame IntegracionBackend.
+
+Respuestas mejoradas:
+1. Crear una nueva rama llamada IntegracionBackend.
+
+Respuesta: Se debe usar el comando git checkout -b IntegracionBackend para crear y cambiar a la nueva rama en el proyecto.
+
+2. Conectar el formulario con el backend y la base de datos para registrar toda la información, evidenciándola en la base de datos.
+
+Respuesta: En el archivo data-service.service.ts dentro del servicio, se implementó el método updateFormData, encargado de recibir y consolidar los datos del formulario desde los diferentes componentes en un objeto formData.
+
+Cuando el objeto formData está completo, el método register se encarga de enviar los datos al backend, específicamente al directorio Conexion_DB. Desde allí, el método register almacena los datos en la base de datos, asegurando que toda la información quede registrada correctamente.
+
+3. hacer el commit
+ 
+4. Recibir un código de estado 200 validando el correo electrónico y el apellido.
+
+Respuesta: Se creó un componente llamado user-search. Este componente, mediante el método onSubmit() se conecta con el servicio DataService pasandole los datos ya validados. En el servicio, se implementó el método searchUser(), que se encarga de enviar los datos al backend, en el directorio Conexion_DB, en esta parte el método search se encarga de realizar la busqueda en la base de datos. 
+
+Para el campo apellido, la consulta es insensible a mayúsculas y minúsculas, lo que permite flexibilidad en su búsqueda. Sin embargo, para el campo email, esta flexibilidad no aplica. Si los datos son válidos, el backend retorna un código de estado 200.
+
+
+5. ¿ tiene alguna incidencia definir en la base de datos los campos de fecha como tipo DATE o como varchar al momento de enviar la peticion ?
+Respuesta: Definir un campo como VARCHAR implica mayores desafíos, ya que se requiere validar manualmente que los datos cumplan con un formato de fecha válido. Esto incrementa la complejidad del código y limita las operaciones nativas entre fechas, como cálculos de intervalos. Además, los campos VARCHAR suelen ocupar más espacio en memoria que los de tipo DATE, lo que puede afectar el rendimiento.
+
+Por otro lado, el tipo DATE está optimizado para almacenar fechas y permite realizar operaciones nativas con facilidad. Sin embargo, si también se necesita registrar horas, sería más adecuado utilizar tipos como DATETIME o TIMESTAMP en lugar de DATE. Por lo tanto, es fundamental evaluar las necesidades específicas del sistema para seleccionar el tipo de dato adecuado y garantizar un diseño eficiente.
 
 
 
-2/11/2024
-vamos a instalar primero sql server https://www.microsoft.com/es-co/sql-server/sql-server-downloads utilizamos el de desarrollador
-
-instalar visual studio 2022 https://visualstudio.microsoft.com/es/vs/ la version commyunity 2022
-
-instalar https://learn.microsoft.com/es-es/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
 
 
 
-$ ng g s services/login para generar un servicio entonces debemos usar un modulo que se llama asi como usamos el ng module vamos a usar uno que se llama http module, entonces en app.config.ts el app.config.ts engloba lo que es la aplicacion como lo hacemos, escogemos la añadimos el modulo a esta linea:
-importProvidersFrom(BrowserAnimationsModule, HttpClient) siendo este segundo el importante
 
-lo primero para conectarnos a la api es tener en cuente que la api es una url, esa api se ejecuta en el mismo servidor donde se ejecuta en el servidor pero tambien puede ser util usar apis externas, esa api tiene unos metodos que puedo consumirlos, por ahora en el archivo login.service.ts en el servicio que se creo en el prinsipio añadimos esta linea para la url
 
- apiUrl = "https://localhost:7128/api/Users"  esta url es la url base,
- para el constructo hay que decirle que es lo que va a usar, primero queda asi private "http: HttpClient"
 
- Ahora vamos a definir el siguente metodo fuera del constructor 
 
- Observable es un objeto que se representa un flujo de datos que se puede manejar 
- de forma asincrona. los observables son parte de la biblioteca RxJS(R)
- y se utilizan principalmente para manejar eventos o fuljos de datos que pueden ocurrir en el futuro
- como respuesta de peticiones HTTP, eventos de usuario - se 
 
- login( username: string, password: string):Observable<any>{
-    const body = {username,password};
-    return this.http.post(`${this.apiUrl}/login`,{username, password})
-    //lo que esta haciendo es tomar this.apiUrl   que va a llegar la va a concatenear con /login 
-  }
 
-  un formGroup permite calcular todo el formulario
 
-  ahora en un componente como login-test.components.ts vamos a agregar en el constructor constructor(private fb : FormBuilder, private loginService: LoginService){ "private loginService: LoginService" esta es es la parte que agregamos ya que esta es la parte del servicio que creamos 
 
-  revisar la arquitectura exagonal, los software de alta escala usan este tipo de software
 
-  "node_modules/primeng/resources/themes/soho-dark/theme.css",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Componentes
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
