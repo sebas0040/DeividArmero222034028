@@ -35,8 +35,11 @@ export class DetailLicenceComponent {
   
   onSubmit(){
     if (this.otherForm.valid){
-      const fech_inicio = new Date(this.otherForm.value.fech_inicio).toLocaleDateString('es-CO')
-      const fech_fin = new Date(this.otherForm.value.fech_fin).toLocaleDateString('es-CO')
+      // const fech_inicio = new Date(this.otherForm.value.fech_inicio).toLocaleDateString('es-CO')
+      // const fech_fin = new Date(this.otherForm.value.fech_fin).toLocaleDateString('es-CO')
+      const fech_inicio = new Date(this.otherForm.value.fech_inicio)
+      const fech_fin = new Date(this.otherForm.value.fech_fin)
+      console.log(fech_fin,' y ',fech_inicio)
       const descripcion = this.otherForm.value.descripcion
       this.dataService.updateFormData({fech_inicio,fech_fin,descripcion})
     }else{

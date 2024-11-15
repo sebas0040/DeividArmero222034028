@@ -23,8 +23,8 @@ export class TituloFormularioComponent {
     this.userForm = this.fb.group({
       name: ['',Validators.required],
       apellido: ['',Validators.required], 
-      email: ['',[Validators.required,Validators.email]],
-      telefono: ['',[Validators.required,Validators.pattern("^(\\d{3} \\d{3} \\d{4})$")]]
+      email: ['',[Validators.required,Validators.email,Validators.maxLength(60)]],
+      telefono: ['',[Validators.required,Validators.pattern("^(\\d{3} \\d{3} \\d{4})$"),Validators.maxLength(12)]]
     })
     this.userForm.valueChanges.subscribe(() => {
       if (this.userForm.valid){

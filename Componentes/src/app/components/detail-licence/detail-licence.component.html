@@ -10,16 +10,17 @@
         </div>
   
       <div class="p-field" >
-        <label for="fech_fin">Fecha de nacimiento</label>
+        <label for="fech_fin">Fecha Final:</label>
         <p-calendar  id="fech_fin" formControlName="fech_fin" showIcon="True" placeholder="DD/MM/YYYY" ></p-calendar>
         <div *ngIf="otherForm.controls['fech_fin'].invalid && otherForm.controls['fech_fin'].touched" class="error">
           La fecha final es requerida
         </div>
       </div>      
+
     
       <div class="p-field" style="display: flex; flex-direction: column; position: relative;">
         <label for="descripcion">Notas</label>
-        <textarea id="descripcion" formControlName="descripcion" rows="5" cols="60" style="margin-top: 0; padding:7px 0 0 30px;"></textarea>
+        <textarea id="descripcion" formControlName="descripcion" maxlength="500" rows="5" cols="60" style="margin-top: 0; padding:7px 0 0 30px;"></textarea>
         <i class="pi pi-align-left" style="position: absolute; top: 25px; left: 10px; color: #888;"></i>
       </div>
       

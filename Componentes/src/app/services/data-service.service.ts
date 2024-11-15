@@ -31,7 +31,6 @@ export class DataServiceService {
   searchUser(data:{}):Observable<any> {
     console.log('los datos son ',data)
     return this.http.post(`${this.apiUrl}/search`,data)
-  
   }
 
   

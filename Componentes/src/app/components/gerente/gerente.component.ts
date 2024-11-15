@@ -22,7 +22,7 @@ export class GerenteComponent {
   constructor(private fb : FormBuilder, private router:Router,private dataService:DataServiceService, private http: HttpClient ){
     this.userForm = this.fb.group({
       name: ['',Validators.required],
-      email: ['',[Validators.required,Validators.email,]], 
+      email: ['',[Validators.required,Validators.email,Validators.maxLength(60)]], 
     });
 
     this.userForm.valueChanges.subscribe(() => {

@@ -4,7 +4,6 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DataServiceService } from '../../services/data-service.service';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-search',
@@ -20,7 +19,7 @@ export class UserSearchComponent {
   constructor (private fb: FormBuilder, private dataService:DataServiceService,){
     this.searchForm = this.fb.group({
       apellido:['',Validators.required],
-      email:['',[Validators.required,Validators.email]]
+      email:['',[Validators.required,Validators.email,Validators.maxLength(60)]]
     })
 
   }
