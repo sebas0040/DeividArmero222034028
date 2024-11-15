@@ -3,6 +3,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TituloFormularioComponent } from './components/titulo-formulario/titulo-formulario.component';
 import { GerenteComponent } from './components/gerente/gerente.component';
 import { DetailLicenceComponent } from './components/detail-licence/detail-licence.component';
+import { UserSearchComponent } from './components/user-search/user-search.component';
 
 export const routes: Routes = [
     {
@@ -23,6 +24,10 @@ export const routes: Routes = [
     {
         path:'detail-licence',
         component:DetailLicenceComponent
+    },
+    {
+        path:'userSearch',
+        component:UserSearchComponent
     }
 
 

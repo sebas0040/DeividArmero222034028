@@ -19,7 +19,6 @@ export class DataServiceService {
     this.formData = { ...this.formData, ...data };  
     console.log('Datos acumulados:', this.formData); 
     if (Object.keys(this.formData).length==9){
-      console.log('se llama a register')
       this.register().subscribe( response => (console.log("Los datos son validos")) )
     } 
 
@@ -28,4 +27,13 @@ export class DataServiceService {
   { 
     return this.http.post(`${this.apiUrl}/register`,this.formData);
   }
+
+  searchUser(data:{}):Observable<any> {
+    console.log('los datos son ',data)
+    return this.http.post(`${this.apiUrl}/search`,data)
+  
+  }
+
+  
+
 }

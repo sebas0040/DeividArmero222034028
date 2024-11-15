@@ -1,0 +1,24 @@
+<div class="p-fluid">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <h2>Cosulta al usuario</h2>
+        <div class="p-field">
+            <label for="apellido">Apellido del usuario</label>
+            <input id="apellido" type="text" pInputText formControlName="apellido">
+            <i class="pi pi-address-book" style="position: absolute; left:10px; transform:translateY(40%); top: 25px; color: #888;"></i>
+            <div *ngIf="searchForm.controls['apellido'].invalid && searchForm.controls['apellido'].touched" class="error">
+                El apellido del usuario es requerido.
+            </div>
+        </div>
+
+        <div class="p-field">
+            <label for="email">Email</label>
+            <input id="email" type="text" pInputText formControlName="email">
+            <i class="pi pi-envelope" style="position: absolute; left:10px; transform:translateY(40%); top: 25px; color: #888;"></i>
+            <div *ngIf="searchForm.controls['email'].invalid && searchForm.controls['email'].touched" class="error">
+                Ingrese un email
+            </div>
+        </div>
+
+        <button pButton type="submit" label="Consultar" [disabled]="searchForm.invalid" class="btn_search"></button>
+    </form>
+</div>

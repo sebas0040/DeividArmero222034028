@@ -1,0 +1,13 @@
+.p-fluid * {
+    margin-top: 30px;
+}
+.p-field input{
+    padding-left: 30px;
+}
+.p-field{
+    position: relative;
+}
+.btn_search{
+    width: 150px;
+    left:30%;
+}
