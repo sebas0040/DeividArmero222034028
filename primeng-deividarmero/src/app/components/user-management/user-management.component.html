@@ -1,0 +1,57 @@
+<div class="p-fluid">
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+      <h2>Actualizar Usuario</h2>
+  
+      <!-- Campo para ID del Usuario -->
+      <div class="p-field">
+        <label for="userId">ID del Usuario</label>
+        <input id="userId" type="number" pInputText formControlName="userId" />
+        <div *ngIf="updateForm.controls['userId'].invalid && updateForm.controls['userId'].touched" class="error">
+          ID no válido
+        </div>
+      </div>
+  
+      <!-- Campo para nuevo nombre de usuario -->
+      <div class="p-field">
+        <label for="username">Nuevo Nombre de Usuario</label>
+        <input id="username" type="text" pInputText formControlName="username" />
+        <div *ngIf="updateForm.controls['username'].invalid && updateForm.controls['username'].touched" class="error">
+          Usuario no válido
+        </div>
+      </div>
+  
+      <!-- Campo para nueva contraseña -->
+      <div class="p-field">
+        <label for="password">Nueva Contraseña</label>
+        <input id="password" type="password" pPassword formControlName="password" />
+        <div *ngIf="updateForm.controls['password'].invalid && updateForm.controls['password'].touched" class="error">
+          La contraseña debe tener al menos 6 caracteres
+        </div>
+      </div>
+  
+      <!-- Botón para actualizar -->
+      <button pButton type="submit" label="Actualizar Usuario" [disabled]="updateForm.invalid"></button>
+    </form>
+  
+    <form [formGroup]="deleteForm" (ngSubmit)="onDelete()">
+      <h2>Eliminar Usuario</h2>
+  
+      <!-- Campo para ID del Usuario a eliminar -->
+      <div class="p-field">
+        <label for="deleteUserId">ID del Usuario</label>
+        <input id="deleteUserId" type="number" pInputText formControlName="userId" />
+        <div *ngIf="deleteForm.controls['userId'].invalid && deleteForm.controls['userId'].touched" class="error">
+          ID no válido
+        </div>
+      </div>
+  
+      <!-- Botón para eliminar -->
+      <button pButton type="submit" label="Eliminar Usuario" [disabled]="deleteForm.invalid" class="p-button-danger"></button>
+    </form>
+  
+    <!-- Mensajes de éxito o error -->
+    <div class="p-mt-3">
+      <p-message *ngIf="successMessage" severity="success" text="{{ successMessage }}"></p-message>
+      <p-message *ngIf="errorMessage" severity="error" text="{{ errorMessage }}"></p-message>
+    </div>
+  </div>

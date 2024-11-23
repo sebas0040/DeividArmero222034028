@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginTestComponent } from './components/login-test/login-test.component';
 import { OtherFormComponent } from './components/other-form/other-form.component';
 import { OtherFormCbComponent } from './components/other-form-cb/other-form-cb.component';
+import { UserManagementComponent } from './components/user-management/user-management.component';
 
 
 
@@ -38,6 +39,10 @@ export const routes: Routes = [
         path: 'other-form-cb',
         component: OtherFormCbComponent
     },
+    {
+        path: 'myupdate',
+        component: UserManagementComponent
+    }
     // {
     //     path: 'logintest',
     //     component: LoginTestComponent

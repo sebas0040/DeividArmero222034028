@@ -7,16 +7,21 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { LoginService } from '../../services/login.service'; // aqui invocamos al servicio
 import { HttpClientModule } from '@angular/common/http';
+import { MessageModule } from 'primeng/message';
 
 @Component({
   selector: 'app-login-test',
   standalone: true,
-  imports: [ReactiveFormsModule,InputTextModule,ButtonModule,PasswordModule,CommonModule, DropdownModule,HttpClientModule],
+  imports: [ReactiveFormsModule,InputTextModule,ButtonModule,PasswordModule,CommonModule, DropdownModule,HttpClientModule,MessageModule],
   templateUrl: './login-test.component.html',
   styleUrl: './login-test.component.css'
 })
 export class LoginTestComponent {
   userForm: FormGroup;
+  updateForm: FormGroup;
+
+  succesMessage:string='';
+  errorMessage:string='';
 
   constructor(private fb : FormBuilder, private loginService: LoginService){
     this.userForm = this.fb.group({
@@ -24,6 +29,14 @@ export class LoginTestComponent {
       email: ['',[Validators.required,Validators.email]], 
       password: ['',[Validators.required, Validators.minLength(6)]],
     });
+
+    this.updateForm = this.fb.group({
+      userId:['',Validators.required],
+      username:['',[Validators.required,Validators.minLength(3)]],
+      Password:['',[Validators.required,Validators.minLength(6)]]
+
+
+    })
     
   }
 
@@ -37,6 +50,10 @@ export class LoginTestComponent {
     }else{
       console.log("Formulario Invalido")
     }
+  }
+
+  onUpdate():void{
+    
   }
   
 }

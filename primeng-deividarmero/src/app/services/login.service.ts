@@ -22,7 +22,14 @@ export class LoginService {
   register( username: string, password: string):Observable<any>{
     const body = {username,password};
     return this.http.post(`${this.apiUrl}/register`,{username, password})//lo que esta haciendo es tomar this.apiUrl   que va a llegar la va a concatenear con /login 
+  }
+  updateUser(id:string, username:string, password:string):Observable<any>{
+    const body = {username,password}
+    return this.http.put(`${this.apiUrl}/register/${id}`,body)
 
+  }
 
+  deleteUser(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/delete/${id}`);
   }
 }
