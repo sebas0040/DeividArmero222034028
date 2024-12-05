@@ -29,7 +29,7 @@ export class UserManagementComponent {
     this.updateForm = this.fb.group({
       userId:['',Validators.required],
       username:['',[Validators.required,Validators.minLength(3)]],
-      Password:['',[Validators.required,Validators.minLength(6)]]
+      password:['',[Validators.required,Validators.minLength(6)]]
 
 
     })
@@ -39,8 +39,6 @@ export class UserManagementComponent {
     });
 
   }
-
-
 
   onUpdate():void{
     if (this.updateForm.valid){

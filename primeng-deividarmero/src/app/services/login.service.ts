@@ -25,11 +25,21 @@ export class LoginService {
   }
   updateUser(id:string, username:string, password:string):Observable<any>{
     const body = {username,password}
-    return this.http.put(`${this.apiUrl}/register/${id}`,body)
+    return this.http.put(`${this.apiUrl}/update/${id}`,body)
 
   }
 
   deleteUser(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/delete/${id}`);
   }
+
+  getUsers(): Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiUrl}/getUsers`)
+  }
+
+  //Obtener usuario por su Id
+  getUserById(userId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/getUserById/${userId}`);
+  }
+
 }
