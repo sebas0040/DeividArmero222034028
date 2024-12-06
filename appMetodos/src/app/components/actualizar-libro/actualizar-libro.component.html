@@ -1,0 +1,80 @@
+<div class="p-fluid" id="group">
+    <h1>Actualizar libros</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="p-field">
+        <label for="id_libro">ID del libro a modificar</label>
+        <input id="id_libro" type="text" pInputText formControlName="id_libro" />
+        <div *ngIf="form.controls['id_libro'].invalid && form.controls['id_libro'].touched" class="error">
+            ID no valido
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label for="titulo">Titulo</label>
+        <input id="titulo" type="text" pInputText formControlName="titulo" />
+        <div *ngIf="form.controls['titulo'].invalid && form.controls['titulo'].touched" class="error">
+          El titulo del libro es requerido
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label for = "autor">Nombre del autor</label>
+        <input id="autor" type="text" pInputText formControlName="autor"/>
+        <div *ngIf="form.controls['autor'].invalid && form.controls['autor'].touched" class="error">
+            El nombre del autor es requerido
+        </div>
+      </div>
+ 
+      <div class="p-field">
+        <label for = "editorial">Nombre de la iditorial</label>
+        <input id="editorial" type="text" pInputText formControlName="editorial"/>
+        <div *ngIf="form.controls['editorial'].invalid && form.controls['editorial'].touched" class="error">
+            El nombre de la editorial es requerido
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label for = "anoPublicacion">Año en el que se publico el libro</label>
+        <input id="anoPublicacion" type="text" pInputText formControlName="anoPublicacion"/>
+        <div *ngIf="form.controls['anoPublicacion'].invalid && form.controls['anoPublicacion'].touched" class="error">
+            El año de publicación es requerido
+        </div>
+      </div>
+
+     <div class="p-field">
+        <label for="precio">Valor del libro $</label>
+        <input id="precio" type="text" pInputText formControlName="precio"/>
+        <div *ngIf="form.controls['precio'].invalid && form.controls['precio'].touched" class="error">
+            El presio del libro es requerido
+        </div>
+      </div>
+   
+      <div class="p-field">
+        <label for="stock">Cantidad del libros </label>
+        <input id="stock" type="text" pInputText formControlName="stock"/>
+        <div *ngIf="form.controls['stock'].invalid && form.controls['stock'].touched" class="error">
+            La cantidad de libros que quiere registrar es requerida
+        </div>
+      </div>
+
+      <div class="p-field">
+        <label for="categoria">Categoria del libro </label>
+        <input id="categoria" type="text" pInputText formControlName="categoria"/>
+        <div *ngIf="form.controls['categoria'].invalid && form.controls['categoria'].touched" class="error">
+            La categoria del libro es requerida
+        </div>
+      </div>
+
+      <button 
+        pButton 
+        type="submit" 
+        label="Actualizar datos"  
+        [disabled]="form.invalid" 
+        [ngClass]="{'btn-invalid': form.invalid, 'btn-valid': form.valid}">
+    </button>
+
+    </form>
+  </div>
+  
+  

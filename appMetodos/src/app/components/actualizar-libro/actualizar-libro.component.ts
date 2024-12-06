@@ -8,17 +8,18 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BookServiceService } from '../../services/book-service.service';
 
 @Component({
-  selector: 'app-registrar-libro',
+  selector: 'app-actualizar-libro',
   standalone: true,
   imports: [HttpClientModule, CommonModule, ButtonModule, InputTextModule, ReactiveFormsModule,DropdownModule],
-  templateUrl: './registrar-libro.component.html',
-  styleUrl: './registrar-libro.component.css'
+  templateUrl: './actualizar-libro.component.html',
+  styleUrl: './actualizar-libro.component.css'
 })
-export class RegistrarLibroComponent {
+export class ActualizarLibroComponent {
 
   form:FormGroup
   constructor (private fb:FormBuilder, private bookService:BookServiceService){
     this.form = this.fb.group({
+      id_libro:['',Validators.required],
       titulo:['',[Validators.required,Validators.maxLength(255)]],
       autor:['',[Validators.required,Validators.maxLength(255)]],
       editorial:['',[Validators.required,Validators.maxLength(255)]],
@@ -30,13 +31,13 @@ export class RegistrarLibroComponent {
   }
   onSubmit(){
     if (this.form.valid){
-      const {titulo,autor,editorial,anoPublicacion,precio,stock,categoria} = this.form.value
-      this.bookService.register(titulo,autor,editorial,anoPublicacion,precio,stock,categoria).subscribe({
+      const {id_libro,titulo,autor,editorial,anoPublicacion,precio,stock,categoria} = this.form.value
+      this.bookService.update(id_libro,titulo,autor,editorial,anoPublicacion,precio,stock,categoria).subscribe({
         next: response =>{
-          console.log("El libro se registro correctamente",response)
+          console.log("El libro se actualizo correctamente",response)
         },
         error: error =>{
-          console.error("Error en el registro del libro",error)
+          console.error("Error en la actulaización del libro",error)
         },
         complete:() =>{
           console.log("Proceso completado correctamente")
@@ -44,7 +45,5 @@ export class RegistrarLibroComponent {
 
       })
     }
-
   }
-
 }

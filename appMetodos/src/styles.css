@@ -3,7 +3,8 @@
 @import "primeflex/primeflex.css";
 
 #group {
-    background-image: url("https://media.architecturaldigest.com/photos/5f8f0401d30e09d9d0bbff8f/16:9/w_1600,c_limit/1%20(4).jpg");
+    /* background-image: url("https://media.architecturaldigest.com/photos/5f8f0401d30e09d9d0bbff8f/16:9/w_1600,c_limit/1%20(4).jpg"); */
+    background-image: url("https://www.teknei.com/wp-content/uploads/2020/09/alfons-morales-YLSwjSy7stw-unsplash-e1630306388778.jpg"); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
