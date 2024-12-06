@@ -34,5 +34,29 @@ namespace backAppMetodos.Controllers
             }
 
         }
+
+        [HttpPut("update/{id}")]
+        public IActionResult Update(int id, [FromBody] Books book)
+        {
+            if (book == null)
+            {
+                return BadRequest("Invalid user data.");
+            }
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                var sql = "UPDATE libros SET titulo = @titulo, autor = @autor, editorial=@editorial, anoPublicacion=@anoPublicacion, precio=@precio, stock=@stock, categoria=@categoria WHERE id = @Id";
+                var rowsAffected = connection.Execute(sql, new { Id = id, book.titulo,book.autor,book.editorial,book.anoPublicacion,book.precio,book.stock,book.categoria });
+
+                if (rowsAffected > 0)
+                {
+                    return Ok("User updated successfully.");
+                }
+                else
+                {
+                    return NotFound("User not found.");
+                }
+            }
+        }
     }
 }

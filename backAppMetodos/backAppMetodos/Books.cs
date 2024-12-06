@@ -2,6 +2,7 @@
 {
     public class Books
     {
+        public int id_libro {  get; set; }
         public string titulo {  get; set; }
         public string autor { get;set; }
         public string editorial { get; set; }
