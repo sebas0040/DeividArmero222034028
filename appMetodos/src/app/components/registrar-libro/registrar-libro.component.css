@@ -1,0 +1,38 @@
+input {
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco semitransparente */
+    backdrop-filter: blur(5px); /* Desenfoque */
+    -webkit-backdrop-filter: blur(5px); /* Compatibilidad con WebKit */
+    border: none; /* Sin bordes para un estilo limpio */
+    padding: 10px; /* Espaciado interno (opcional) */
+}
+
+#group {
+    background: transparent;
+    color:rgb(205, 227, 252);
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 20px;  
+}
+
+#group *{
+    margin:5px;
+}
+
+button{
+    width:150px;
+    left: 37%;
+}
+.btn-invalid {
+    background-color: #070100; /* Rojo claro para estado inválido */
+    color: white;
+    cursor: not-allowed;
+}
+
+.btn-valid {
+    color:rgb(205, 227, 252); /* Verde claro para estado válido */
+    color: white;
+    cursor: pointer;
+}
+.error{
+    color: rgb(255, 15, 63);
+    font-weight: 700;
+}
