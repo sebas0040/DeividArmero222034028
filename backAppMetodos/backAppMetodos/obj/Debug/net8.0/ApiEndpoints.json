@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "backAppMetodos.Controllers.BooksController",
+    "Method": "Register",
+    "RelativePath": "api/Books/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "book",
+        "Type": "backAppMetodos.Books",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
