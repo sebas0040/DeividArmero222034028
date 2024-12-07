@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D5D06713-CB66-4DFB-970F-D079CCDA3BA2}|backAppMetodos\\backAppMetodos.csproj|d:\\dell\\downloads\\semestres\\sextosemestre\\computaci\u00F3ngrafica\\deividarmero222034028\\backappmetodos\\backappmetodos\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5D06713-CB66-4DFB-970F-D079CCDA3BA2}|backAppMetodos\\backAppMetodos.csproj|solutionrelative:backappmetodos\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5D06713-CB66-4DFB-970F-D079CCDA3BA2}|backAppMetodos\\backAppMetodos.csproj|d:\\dell\\downloads\\semestres\\sextosemestre\\computaci\u00F3ngrafica\\deividarmero222034028\\backappmetodos\\backappmetodos\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5D06713-CB66-4DFB-970F-D079CCDA3BA2}|backAppMetodos\\backAppMetodos.csproj|solutionrelative:backappmetodos\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5D06713-CB66-4DFB-970F-D079CCDA3BA2}|backAppMetodos\\backAppMetodos.csproj|d:\\dell\\downloads\\semestres\\sextosemestre\\computaci\u00F3ngrafica\\deividarmero222034028\\backappmetodos\\backappmetodos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5D06713-CB66-4DFB-970F-D079CCDA3BA2}|backAppMetodos\\backAppMetodos.csproj|solutionrelative:backappmetodos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaci\u00F3nGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\Program.cs",
-              "RelativeDocumentMoniker": "backAppMetodos\\Program.cs",
-              "ToolTip": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaci\u00F3nGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\Program.cs",
-              "RelativeToolTip": "backAppMetodos\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T14:40:20.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Books.cs",
-              "DocumentMoniker": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaci\u00F3nGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\Books.cs",
-              "RelativeDocumentMoniker": "backAppMetodos\\Books.cs",
-              "ToolTip": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaci\u00F3nGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\Books.cs",
-              "RelativeToolTip": "backAppMetodos\\Books.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T13:27:33.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BooksController.cs",
               "DocumentMoniker": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaci\u00F3nGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "backAppMetodos\\Controllers\\BooksController.cs",
               "ToolTip": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaci\u00F3nGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\Controllers\\BooksController.cs",
               "RelativeToolTip": "backAppMetodos\\Controllers\\BooksController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwDAAAACpAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAuwEYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T13:17:29.809Z",
+              "WhenOpened": "2024-12-07T01:10:26.8Z",
               "EditorCaption": ""
             }
           ]

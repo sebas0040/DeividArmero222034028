@@ -58,5 +58,23 @@ namespace backAppMetodos.Controllers
                 }
             }
         }
+        [HttpDelete("delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                var sql = "DELETE FROM libros WHERE id = @id";
+                var rowsAffected = connection.Execute(sql, new { id });
+                if (rowsAffected > 0)
+                {
+                    return Ok(new { message = "User deleted successfully" });
+                }
+                else
+                {
+                    return NotFound("User Not found.");
+                }
+
+            }
+        }
     }
 }
