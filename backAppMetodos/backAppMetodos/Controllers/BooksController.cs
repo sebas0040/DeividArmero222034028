@@ -76,5 +76,61 @@ namespace backAppMetodos.Controllers
 
             }
         }
+
+        [HttpGet("getBooks")]
+        public IActionResult GetBook()
+        {
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    var sql = "SELECT * FROM libros";
+                    var books = connection.Query<Books>(sql).ToList();
+
+                    if (books == null || books.Count == 0)
+                    {
+                        return NotFound("Users Not Found");
+                    }
+
+                    return Ok(books);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        //// Método para obtener un usuario por su ID
+        [HttpGet("getBookById/{id}")]
+        public IActionResult GetUserById(int id)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    // Consulta SQL para obtener el usuario por ID
+                    var sql = "SELECT * FROM libros WHERE Id = @Id";
+
+                    // Usamos Dapper para ejecutar la consulta
+                    var book = connection.QuerySingleOrDefault<Books>(sql, new { Id = id });
+
+                    // Si no se encuentra el usuario
+                    if (book == null)
+                    {
+                        return NotFound($"User with ID {id} not found.");
+                    }
+
+                    // Devolvemos el usuario encontrado
+                    return Ok(book);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Si hay un error, devolvemos un mensaje de error
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
     }
 }
