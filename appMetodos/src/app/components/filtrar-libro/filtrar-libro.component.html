@@ -1,0 +1,42 @@
+<div class="filter-books-container">
+    <h2>Buscar Usuario por ID</h2>
+    <div class="filter-form">
+      <input  pInputText type="text" placeholder="Ingresa el ID del libro" [(ngModel)]="id"/>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    </div>
+    <button pButton  type="button" label="Buscar" (click)="searchBookById()" [disabled]="isLoading"></button>
+  
+    <p-table *ngIf="libro.length" [value]="libro" [paginator]="true" [rows]="5" [responsiveLayout]="'scroll'" >
+      <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+            <th>Año publicación</th>
+            <th>Precio</th>
+            <th>stock</th>
+            <th>Categoria</th>
+            <th>Acciones</th>
+        </tr>
+        
+      </ng-template>
+      <ng-template pTemplate="body" let-libro>
+        <tr>
+            <td>{{libro.id}}</td>
+            <td>{{libro.titulo}}</td>
+            <td>{{libro.autor}}</td>
+            <td>{{libro.editorial}}</td>
+            <td>{{libro.anoPublicacion}}</td>
+            <td>{{libro.precio}}</td>
+            <td>{{libro.stock}}</td>
+            <td>{{libro.categoria}}</td>
+            <td>
+                <button pbutton type="button" label="Editar" class="p-button-sm p-button-warning" >Editar</button> 
+                <button pbutton type="button" label="Eliminar" class="p-button-sm p-button-warning" (click)="onDelete(libro.id)">Eliminar</button>
+            </td>
+          
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>

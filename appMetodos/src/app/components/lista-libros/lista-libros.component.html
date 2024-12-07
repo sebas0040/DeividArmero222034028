@@ -1,0 +1,36 @@
+<div id="group">
+    <form action="">
+        <h1>Lista de usuarios</h1>
+        <p-table [value]="libros" [paginator]="true" [rows]="7" [responsiveLayout]="'scroll'" id="tabla">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Editorial</th>
+                    <th>Año publicación</th>
+                    <th>Precio</th>
+                    <th>stock</th>
+                    <th>Categoria</th>
+                    <th>Acciones</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-libros>
+                <tr>
+                    <td>{{libros.id}}</td>
+                    <td>{{libros.titulo}}</td>
+                    <td>{{libros.autor}}</td>
+                    <td>{{libros.editorial}}</td>
+                    <td>{{libros.anoPublicacion}}</td>
+                    <td>{{libros.precio}}</td>
+                    <td>{{libros.stock}}</td>
+                    <td>{{libros.categoria}}</td>
+                    <td>
+                        <button pbutton type="button" label="Editar" class="p-button-sm p-button-warning" >Editar</button> 
+                        <button pbutton type="button" label="Eliminar" class="p-button-sm p-button-danger" (click)="onDelete(libros.id)" >Eliminar</button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </form>
+</div>

@@ -3,9 +3,9 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
       <div class="p-field">
-        <label for="id_libro">ID del libro a modificar</label>
-        <input id="id_libro" type="text" pInputText formControlName="id_libro" />
-        <div *ngIf="form.controls['id_libro'].invalid && form.controls['id_libro'].touched" class="error">
+        <label for="id">ID del libro a modificar</label>
+        <input id="id" type="text" pInputText formControlName="id" />
+        <div *ngIf="form.controls['id'].invalid && form.controls['id'].touched" class="error">
             ID no valido
         </div>
       </div>
@@ -81,15 +81,14 @@
     
         <!-- Campo para ID del Usuario a eliminar -->
         <div class="p-field">
-          <label for="id_libro">ID del libro</label>
-          <input id="id_libro" type="number" pInputText formControlName="id_libro" />
-          <div *ngIf="deleteForm.controls['id_libro'].invalid && deleteForm.controls['id_libro'].touched" class="error">
+          <label for="id">ID del libro</label>
+          <input id="id" type="number" pInputText formControlName="id" />
+          <div *ngIf="deleteForm.controls['id'].invalid && deleteForm.controls['id'].touched" class="error">
             ID no válido
           </div>
         </div>
     
         <!-- Botón para eliminar -->
-        <!-- <button pButton type="submit" label="Eliminar Usuario" [disabled]="deleteForm.invalid" class="p-button-danger"></button> -->
         <button 
             pButton 
             type="submit" 
@@ -104,7 +103,6 @@
       <div class="p-mt-3">
         <p-message *ngIf="successMessage" severity="success" [text]="successMessage"></p-message>
         <p-message *ngIf="errorMessage" severity="error" [text]="errorMessage"></p-message>
-
       </div>
 
   </div>

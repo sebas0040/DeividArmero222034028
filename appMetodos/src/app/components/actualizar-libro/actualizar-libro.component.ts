@@ -24,7 +24,7 @@ export class ActualizarLibroComponent {
 
   constructor (private fb:FormBuilder, private bookService:BookServiceService){
     this.form = this.fb.group({
-      id_libro:['',Validators.required],
+      id:['',Validators.required],
       titulo:['',[Validators.required,Validators.maxLength(255)]],
       autor:['',[Validators.required,Validators.maxLength(255)]],
       editorial:['',[Validators.required,Validators.maxLength(255)]],
@@ -35,14 +35,14 @@ export class ActualizarLibroComponent {
     });
 
     this.deleteForm = this.fb.group({
-      id_libro:['',Validators.required]
+      id:['',Validators.required]
     });
 
   };
   onSubmit(){
     if (this.form.valid){
-      const {id_libro,titulo,autor,editorial,anoPublicacion,precio,stock,categoria} = this.form.value
-      this.bookService.update(id_libro,titulo,autor,editorial,anoPublicacion,precio,stock,categoria).subscribe({
+      const {id,titulo,autor,editorial,anoPublicacion,precio,stock,categoria} = this.form.value
+      this.bookService.update(id,titulo,autor,editorial,anoPublicacion,precio,stock,categoria).subscribe({
         next: response =>{
           console.log("El libro se actualizo correctamente",response)
           this.form.reset()
@@ -60,8 +60,8 @@ export class ActualizarLibroComponent {
 
   onDelete(): void {
     if (this.deleteForm.valid) {
-      const { id_libro } = this.deleteForm.value;
-      this.bookService.deleteBook(id_libro).subscribe({
+      const { id } = this.deleteForm.value;
+      this.bookService.deleteBook(id).subscribe({
         next: (response) => {
           console.log("respuesta del back", response)
           this.successMessage = 'Usuario eliminado exitosamente.';
