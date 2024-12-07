@@ -36,7 +36,7 @@
 
       <div class="p-field">
         <label for = "anoPublicacion">Año en el que se publico el libro</label>
-        <input id="anoPublicacion" type="text" pInputText formControlName="anoPublicacion"/>
+        <input id="anoPublicacion" type="number" pInputText formControlName="anoPublicacion"/>
         <div *ngIf="form.controls['anoPublicacion'].invalid && form.controls['anoPublicacion'].touched" class="error">
             El año de publicación es requerido
         </div>
@@ -44,7 +44,7 @@
 
      <div class="p-field">
         <label for="precio">Valor del libro $</label>
-        <input id="precio" type="text" pInputText formControlName="precio"/>
+        <input id="precio" type="number" pInputText formControlName="precio"/>
         <div *ngIf="form.controls['precio'].invalid && form.controls['precio'].touched" class="error">
             El presio del libro es requerido
         </div>
@@ -52,7 +52,7 @@
    
       <div class="p-field">
         <label for="stock">Cantidad del libros </label>
-        <input id="stock" type="text" pInputText formControlName="stock"/>
+        <input id="stock" type="number" pInputText formControlName="stock"/>
         <div *ngIf="form.controls['stock'].invalid && form.controls['stock'].touched" class="error">
             La cantidad de libros que quiere registrar es requerida
         </div>
@@ -72,9 +72,41 @@
         label="Actualizar datos"  
         [disabled]="form.invalid" 
         [ngClass]="{'btn-invalid': form.invalid, 'btn-valid': form.valid}">
-    </button>
+      </button>
 
     </form>
+
+    <form [formGroup]="deleteForm" (ngSubmit)="onDelete()">
+        <h1>Eliminar Usuario</h1>
+    
+        <!-- Campo para ID del Usuario a eliminar -->
+        <div class="p-field">
+          <label for="id_libro">ID del libro</label>
+          <input id="id_libro" type="number" pInputText formControlName="id_libro" />
+          <div *ngIf="deleteForm.controls['id_libro'].invalid && deleteForm.controls['id_libro'].touched" class="error">
+            ID no válido
+          </div>
+        </div>
+    
+        <!-- Botón para eliminar -->
+        <!-- <button pButton type="submit" label="Eliminar Usuario" [disabled]="deleteForm.invalid" class="p-button-danger"></button> -->
+        <button 
+            pButton 
+            type="submit" 
+            label="Eliminar"  
+            class="p-button-danger"
+            [disabled]="deleteForm.invalid" 
+            [ngClass]="{'btn-invalid': form.invalid, 'btn-valid': form.valid}">
+        </button>
+    </form>
+    
+      <!-- Mensajes de éxito o error -->
+      <div class="p-mt-3">
+        <p-message *ngIf="successMessage" severity="success" [text]="successMessage"></p-message>
+        <p-message *ngIf="errorMessage" severity="error" [text]="errorMessage"></p-message>
+
+      </div>
+
   </div>
   
   

@@ -20,5 +20,6 @@ export const routes: Routes = [
     {
         path:'actualizar-libro',
         component:ActualizarLibroComponent
-    }
+    },
+    
 ];
