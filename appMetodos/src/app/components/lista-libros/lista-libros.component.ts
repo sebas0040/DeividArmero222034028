@@ -43,6 +43,7 @@ export class ListaLibrosComponent {
     
   }
   onEdit(libro:any):void{
-    this.router.navigate(['/actualizar-libro',libro.id])
+    this.router.navigate(['/actualizar-libro',libro])
   }
+  
 }

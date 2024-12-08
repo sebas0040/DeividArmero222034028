@@ -6,6 +6,7 @@ import { TableModule } from 'primeng/table';
 import { BookServiceService } from '../../services/book-service.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-filtrar-libro',
@@ -20,7 +21,7 @@ export class FiltrarLibroComponent {
   id: string = ''; 
   errorMessage: string = '';
   isLoading: boolean = false; 
-  constructor(private bookService: BookServiceService){}
+  constructor(private bookService: BookServiceService, private router: Router){}
 
    
    searchBookById(): void {
@@ -47,10 +48,16 @@ export class FiltrarLibroComponent {
 
   onDelete(id: number): void {
     this.bookService.deleteBook(id).subscribe({
-      next: () => console.log('ususario eliminado'),
+      next: () => {
+        console.log('ususario eliminado')
+        this.searchBookById()
+      },
       error: () => console.log('error en la eliminacion del usuario'),
       complete: () => console.log('proceso completado')
     })
+  }
+  onEdit(libro:any):void{
+    this.router.navigate(['/actualizar-libro',libro])
   }
 
 }

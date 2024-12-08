@@ -4,6 +4,8 @@ import { RegistrarLibroComponent } from './components/registrar-libro/registrar-
 import { ActualizarLibroComponent } from './components/actualizar-libro/actualizar-libro.component';
 import { ListaLibrosComponent } from './components/lista-libros/lista-libros.component';
 import { FiltrarLibroComponent } from './components/filtrar-libro/filtrar-libro.component';
+import { MenuItemContent } from 'primeng/menu';
+import { MenuLibrosComponent } from './components/menu-libros/menu-libros.component';
 
 export const routes: Routes = [
     {
@@ -20,7 +22,7 @@ export const routes: Routes = [
         component:RegistrarLibroComponent
     },
     {
-        path:'actualizar-libro',
+        path:'actualizar-libro/:id',
         component:ActualizarLibroComponent
     },
     {
@@ -30,6 +32,10 @@ export const routes: Routes = [
     {
         path:'filtrar-libro',
         component:FiltrarLibroComponent
+    },
+    {
+        path:'menu',
+        component:MenuLibrosComponent
     }
     
 ];

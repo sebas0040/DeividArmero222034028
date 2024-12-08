@@ -7,6 +7,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { BookServiceService } from '../../services/book-service.service';
 import { MessageModule } from 'primeng/message';
+import { ActivatedRoute } from '@angular/router';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 @Component({
   selector: 'app-actualizar-libro',
@@ -19,10 +21,13 @@ export class ActualizarLibroComponent {
 
   form:FormGroup;
   deleteForm: FormGroup;
+  successMessageL = '';
+  errorMessageL = '';
   successMessage = '';
   errorMessage = '';
+  idl=0;
 
-  constructor (private fb:FormBuilder, private bookService:BookServiceService){
+  constructor (private fb:FormBuilder, private bookService:BookServiceService, private route:ActivatedRoute){
     this.form = this.fb.group({
       id:['',Validators.required],
       titulo:['',[Validators.required,Validators.maxLength(255)]],
@@ -38,17 +43,24 @@ export class ActualizarLibroComponent {
       id:['',Validators.required]
     });
 
+    this.ngOnInit()
+
   };
   onSubmit(){
     if (this.form.valid){
+      this.form.get('id')?.enable();
       const {id,titulo,autor,editorial,anoPublicacion,precio,stock,categoria} = this.form.value
       this.bookService.update(id,titulo,autor,editorial,anoPublicacion,precio,stock,categoria).subscribe({
         next: response =>{
           console.log("El libro se actualizo correctamente",response)
+          this.successMessageL = 'Libro actualizado exitosamente.';
+          this.errorMessageL = '';
           this.form.reset()
         },
         error: error =>{
           console.error("Error en la actulaización del libro",error)
+          this.successMessageL = 'Hubo un error al actualizar al usuario';
+          this.errorMessageL = '';
         },
         complete:() =>{
           console.log("Proceso completado correctamente")
@@ -64,17 +76,32 @@ export class ActualizarLibroComponent {
       this.bookService.deleteBook(id).subscribe({
         next: (response) => {
           console.log("respuesta del back", response)
-          this.successMessage = 'Usuario eliminado exitosamente.';
+          this.successMessage = 'Libro eliminado exitosamente.';
           this.errorMessage = '';
           this.deleteForm.reset();
         },
         error: (error) => {
           console.log("error del back",error)
-          this.errorMessage = 'Error al eliminar el usuario.';
+          this.errorMessage = 'Error al eliminar el libro.';
           this.successMessage = '';
         },
         complete: () => console.log('Proceso de eliminación completado'),
       });
+    }
+  }
+  ngOnInit(): void {
+    // Obtén el parámetro 'id' de la URL
+    const idParam = this.route.snapshot.paramMap.get('id');
+    this.idl = idParam ? +idParam : 0;  // Asigna 0 si el id es nulo
+    this.toggleDisabled()
+
+  }
+  toggleDisabled() {
+    if (this.idl !== 0) {
+      this.form.get('id')?.disable();
+      this.form.get('id')?.setValue(this.idl);
+    } else {
+      this.form.get('id')?.enable();
     }
   }
 }

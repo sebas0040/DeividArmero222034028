@@ -26,7 +26,7 @@
                     <td>{{libros.stock}}</td>
                     <td>{{libros.categoria}}</td>
                     <td>
-                        <button pbutton type="button" label="Editar" class="p-button-sm p-button-warning" >Editar</button> 
+                        <button pbutton type="button" label="Editar" class="p-button-sm p-button-warning" (click)="onEdit(libros.id)">Editar</button> 
                         <button pbutton type="button" label="Eliminar" class="p-button-sm p-button-danger" (click)="onDelete(libros.id)" >Eliminar</button>
                     </td>
                 </tr>

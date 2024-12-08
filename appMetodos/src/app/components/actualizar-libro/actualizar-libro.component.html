@@ -76,6 +76,11 @@
 
     </form>
 
+    <div class="p-mt-3">
+      <p-message *ngIf="successMessageL" severity="success" [text]="successMessageL"></p-message>
+      <p-message *ngIf="errorMessageL" severity="error" [text]="errorMessageL"></p-message>
+    </div>
+
     <form [formGroup]="deleteForm" (ngSubmit)="onDelete()">
         <h1>Eliminar Usuario</h1>
     

@@ -58,6 +58,11 @@
         </div>
       </div>
 
+      <div class="p-mt-3">
+        <p-message *ngIf="successMessage" severity="success" [text]="successMessage"></p-message>
+        <p-message *ngIf="errorMessage" severity="error" [text]="errorMessage"></p-message>
+      </div>
+
       <button 
         pButton 
         type="submit" 

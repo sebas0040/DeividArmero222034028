@@ -1,0 +1,17 @@
+<nav>
+    <nav class="bar_menu">
+        <p-button icon="pi pi-check" [rounded]="true" [text]="true" severity="warning" label="Registrar" (click)="changeComponent('registrar')"/>
+        <p-button icon="pi pi-sync" [rounded]="true" [text]="true" severity="secondary" label="Actualizar" (click)="changeComponent('actualizar')"/>
+        <p-button icon="pi pi-book" [rounded]="true" [text]="true" severity="success" label="Libros" (click)="changeComponent('lista')"/>
+        <p-button icon="pi pi-search" [rounded]="true" [text]="true" severity="info" label="Buscar" (click)="changeComponent('filtrar')"/>
+        <!-- <p-button icon="pi pi-dollar" [rounded]="true" [text]="true" severity="danger"  label="Vender"/>  -->
+    </nav>
+
+    <!-- <router-outlet></router-outlet> -->      
+    <div class="components">
+        <app-registrar-libro *ngIf="currentComponent === 'registrar'"></app-registrar-libro>
+        <app-actualizar-libro *ngIf="currentComponent === 'actualizar'"></app-actualizar-libro>
+        <app-lista-libros *ngIf="currentComponent === 'lista'"></app-lista-libros>
+        <app-filtrar-libro *ngIf="currentComponent === 'filtrar'"></app-filtrar-libro>
+    </div>     
+</nav>

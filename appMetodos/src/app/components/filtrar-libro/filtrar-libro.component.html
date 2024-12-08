@@ -32,7 +32,7 @@
             <td>{{libro.stock}}</td>
             <td>{{libro.categoria}}</td>
             <td>
-                <button pbutton type="button" label="Editar" class="p-button-sm p-button-warning" >Editar</button> 
+                <button pbutton type="button" label="Editar" class="p-button-sm p-button-warning" (click)="onEdit(libro.id)">Editar</button> 
                 <button pbutton type="button" label="Eliminar" class="p-button-sm p-button-warning" (click)="onDelete(libro.id)">Eliminar</button>
             </td>
           
