@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("backAppMetodos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dd900cd27b2f2cc8876ab4d109129d480dc93cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e810f212ba991a117d96e3b6050850a2ef7aea01")]
 [assembly: System.Reflection.AssemblyProductAttribute("backAppMetodos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("backAppMetodos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

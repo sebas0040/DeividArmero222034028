@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "d:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj": {}
+    "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj": {}
   },
   "projects": {
-    "d:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj": {
+    "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj",
+        "projectUniqueName": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj",
         "projectName": "backAppMetodos",
-        "projectPath": "d:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj",
+        "projectPath": "D:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\backAppMetodos.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
         "outputPath": "d:\\DELL\\Downloads\\SEMESTRES\\sextoSemestre\\computaciónGrafica\\DeividArmero222034028\\backAppMetodos\\backAppMetodos\\obj\\",
         "projectStyle": "PackageReference",

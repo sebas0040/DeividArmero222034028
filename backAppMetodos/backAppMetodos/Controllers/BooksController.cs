@@ -25,7 +25,7 @@ namespace backAppMetodos.Controllers
                 var rowsAffected = connection.Execute(sql, new { book.titulo, book.autor, book.editorial, book.anoPublicacion, book.precio, book.stock, book.categoria });
                 if (rowsAffected > 0)
                 {
-                    return Ok("Book registered successfully.");
+                    return Ok(new { message = "Book updated successfully" });
                 }
                 else
                 {
@@ -50,11 +50,11 @@ namespace backAppMetodos.Controllers
 
                 if (rowsAffected > 0)
                 {
-                    return Ok("User updated successfully.");
+                    return Ok(new { message = "Book updated successfully" });
                 }
                 else
                 {
-                    return NotFound("User not found.");
+                    return NotFound("Book not found.");
                 }
             }
         }
@@ -67,7 +67,7 @@ namespace backAppMetodos.Controllers
                 var rowsAffected = connection.Execute(sql, new { id });
                 if (rowsAffected > 0)
                 {
-                    return Ok(new { message = "User deleted successfully" });
+                    return Ok(new { message = "Book deleted successfully" });
                 }
                 else
                 {
